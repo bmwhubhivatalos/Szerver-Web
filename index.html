@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BMW Hub | Edit & Community</title>
 
+<style>
+/* ===== BMW M COLORS ===== */
+:root{
+  --m-blue:#00A3FF;
+  --m-purple:#7A00FF;
+  --m-red:#FF2B2B;
+}
+
+/* ===== BODY ===== */
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  color:white;
+  background:black;
+  overflow-x:hidden;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+.bg{
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
+    url("bmwhubprototipusneededit.jpg") center/cover no-repeat;
+  z-index:-2;
+}
+
+/* moving color glow */
+.bg::after{
+  content:"";
+  position:absolute;
+  inset:-50%;
+  background: conic-gradient(
+    var(--m-blue),
+    var(--m-purple),
+    var(--m-red),
+    var(--m-blue)
+  );
+  filter: blur(120px);
+  opacity:.35;
+  animation: rotate 20s linear infinite;
+  z-index:-1;
+}
+
+@keyframes rotate{
+  from{ transform:rotate(0deg);}
+  to{ transform:rotate(360deg);}
+}
+
+/* ===== HEADER ===== */
+header{
+  text-align:center;
+  padding:70px 20px 40px;
+}
+
+h1{
+  font-size:3rem;
+  margin:0;
+  letter-spacing:2px;
+  text-shadow:
+    0 0 10px var(--m-blue),
+    0 0 20px var(--m-purple);
+}
+
+/* ===== GLASS CARD ===== */
+.card{
+  max-width:900px;
+  margin:auto;
+  background:rgba(0,0,0,.6);
+  backdrop-filter: blur(18px);
+  border-radius:18px;
+  padding:35px;
+  box-shadow:
+    0 0 40px rgba(0,0,0,.9),
+    inset 0 0 20px rgba(255,255,255,.05);
+}
+
+/* ===== TITLES ===== */
+h2{
+  margin-top:30px;
+  border-left:5px solid var(--m-blue);
+  padding-left:12px;
+}
+
+/* ===== LIST ===== */
+ul{
+  list-style:none;
+  padding:0;
+  line-height:1.8;
+  font-size:1.05rem;
+}
+
+/* ===== BUTTON ===== */
+.join{
+  display:inline-block;
+  margin-top:35px;
+  padding:18px 48px;
+  font-size:1.3rem;
+  font-weight:bold;
+  text-decoration:none;
+  color:white;
+  border-radius:12px;
+  background: linear-gradient(
+    90deg,
+    var(--m-blue),
+    var(--m-purple),
+    var(--m-red)
+  );
+  background-size:200%;
+  transition:.3s;
+  box-shadow:
+    0 0 20px var(--m-blue),
+    0 0 40px var(--m-purple);
+}
+
+.join:hover{
+  transform:scale(1.08);
+  background-position:right;
+  box-shadow:
+    0 0 30px var(--m-red),
+    0 0 60px var(--m-purple);
+}
+
+/* ===== LINKS ===== */
+.links{
+  margin-top:20px;
+  opacity:.85;
+  font-size:.95rem;
+}
+
+/* ===== PING ===== */
+.ping{
+  margin-top:18px;
+  font-weight:bold;
+  color:#ddd;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  margin:40px 0;
+  opacity:.6;
+  font-size:.85rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<header>
+  <h1>《 BMW Hub | Edit & Community 》</h1>
+</header>
+
+<div class="card">
+
+  <h2>Szerver Kínálat</h2>
+  <ul>
+    <li>・Edit megosztás ➕</li>
+    <li>・Barátságos közösség 💫</li>
+    <li>・NSFW mentes szerver 🔞</li>
+    <li>・Nyereményjátékok 🎡</li>
+    <li>・Sok frissítés 📊</li>
+    <li>・Economy 💹</li>
+    <li>・Saját „🤍 BMW” szervercímke</li>
+    <li>・🖤 BMW 🤍</li>
+  </ul>
+
+  <h2>Szerver Információ</h2>
+  <ul>
+    <li>・Saját Discord bot</li>
+    <li>・Nem ítélünk el másokat mert NEM bmw-s 👎</li>
+    <li>・Modi TGF 📜</li>
+    <li>・Sok online tag 🟢</li>
+    <li>・Kedves staff team 🚫</li>
+  </ul>
+
+  <h2>Csatlakozz</h2>
+  <ul>
+    <li>・Csatlakozz most és legyél a BMW Hub tagja 🌐</li>
+    <li><b>Partner infó:</b> Ha 10 tag érkezik a szerveredről, megkapod a <b>Mindenható</b> rangot + önpromó unlock!</li>
+  </ul>
+
+  <div class="ping">PING: @here @everyone</div>
+
+  <div class="links">
+    DC: https://discord.gg/VXXRm4Y2nC<br>
+    TT: https://www.tiktok.com/@bmwhubhivatalostt
+  </div>
+
+  <div style="text-align:center;">
+    <a class="join" href="https://discord.gg/VXXRm4Y2nC" target="_blank">
+      🚀 Csatlakozás
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © BMW Hub Community
+</footer>
+
+</body>
+</html>
